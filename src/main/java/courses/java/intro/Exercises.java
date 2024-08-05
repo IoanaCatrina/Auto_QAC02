@@ -35,6 +35,33 @@ public class Exercises {
         }
         System.out.println("Number of appearances of " + c + " is: " + nrApp);
 
+//        Calculate the sum of the first 100 numbers higher than 0
+        int myNumber = 100;
+            int sumNumbers = myNumber * (myNumber + 1) / 2;
+            System.out.println(sumNumbers);
+
+        int sum = 0;
+        for (int i = 1; i <= 100; i++) {
+            sum = sum + i;
+        }
+        System.out.println(sum);
+
+//        Display all the prime numbers lower than 100
+        for (int i = 2; i < 100; i++){
+            boolean isPrime = true;
+            for (int j = 2; j < i; j++){
+                if (i % j == 0){
+                    isPrime = false;
+                }
+            }
+            if (isPrime) {
+                System.out.print(i + " ");
+            }
+        }
+
+
+
+
 
 
 
