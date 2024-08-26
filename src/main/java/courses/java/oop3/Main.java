@@ -1,0 +1,108 @@
+package courses.java.oop3;
+
+import courses.java.oop2.*;
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] values = {1, 5, 7};
+        System.out.println(values[1]);
+
+        Shape[] shapes = {
+                new Square(),
+                new Triangle(),
+                new Circle()
+        };
+
+        Shape[] sh2 = new Shape[5];
+        sh2[0] = new Circle(5);
+        sh2[0].setColor("Blue");
+        System.out.println(sh2[0].getColor());
+//        Cast
+        ((Circle)sh2[0]).printCircle();
+
+        Circle[] circ2 = {new Circle(1), new Circle(2)};
+        circ2[0].printCircle();
+
+//  For Each Loop / Enhanced for - loop through elements in an array
+        for (Circle s : circ2) {
+            s.printShape();
+        }
+//  Loop through elements in an array using index
+        for (int i = 0; i < circ2.length; i++) {
+            circ2[i].printShape();
+        }
+
+        ArrayList l = new ArrayList();
+        l.add("Ana");
+        l.add("are");
+        l.add("mere");
+        System.out.println(circ2);
+        System.out.println("This is a list " + l);
+
+//  Specify the data type using <>
+        ArrayList<String> myList2 = new ArrayList<>();
+        myList2.add("java");
+
+        ArrayList<String> myList = new ArrayList<>();
+        myList.add("ioana");
+        myList.add(1, "ioana");
+//  Add myList2 elements on myList
+        myList.addAll(myList2);
+//        myList.clear();
+        System.out.println("List size: " + myList.size());
+//        myList.remove(1);
+
+        Iterator it = myList.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+        System.out.println("------------------");
+
+        /*ArrayList<Circle> circleList = new ArrayList<>();
+        circleList.add(new Circle(7));
+        for (Circle c : circleList) {
+            c.printCircle();
+        }*/
+
+        HashSet<String> hasSet1 = new HashSet<>();
+        hasSet1.add("ioana");
+        hasSet1.add("ioana"); // will not be added since it;s duplicated
+        System.out.println("HashSet size: " + hasSet1.size());
+
+        hasSet1.addAll(myList);
+        Utils.printList(hasSet1);
+        System.out.println("--------------------------");
+
+        HashMap<Integer, String> myHashmap = new HashMap<>();
+        myHashmap.put(1, "ioana");
+        myHashmap.put(2, "java");
+        myHashmap.put(3, "intellij");
+        Utils.printMap(myHashmap);
+        System.out.println("-------------------------");
+
+        System.out.println("How many characters are in a String");
+        String text = "Ana are mere si pere si caise si coacaze. Este sezonul, deci vor fi foarte gustoase!";
+        Utils.printMap(Utils.countCharsInText(text));
+        System.out.println("-------------------");
+
+        System.out.println(Browser.FIREFOX);
+
+        System.out.println("Catalogue");
+        Catalogue myCatalogue = new Catalogue();
+        myCatalogue.addStudent("Alex G", 7.0);
+        myCatalogue.addStudent("Bogdan T", 9.0);
+        myCatalogue.addStudent("Miruna C", 9.5);
+        myCatalogue.addStudent("Andrei A", 4.0);
+
+        myCatalogue.printStudents();
+        myCatalogue.searchStudent("Alex A");
+        myCatalogue.searchStudent("Alex G");
+
+        myCatalogue.deleteStudent("Alex G");
+        myCatalogue.orderStudentsName();
+        myCatalogue.orderStudentsGrade();
+
+    }
+}

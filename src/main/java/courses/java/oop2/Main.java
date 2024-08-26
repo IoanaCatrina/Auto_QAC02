@@ -2,9 +2,6 @@ package courses.java.oop2;
 
 public class Main {
     public static void main(String[] args) {
-        Shape s1 = new Shape("fuchsia", 0);
-        s1.setColor("red");
-        System.out.println("The color of the shape is " + s1.getColor());
 
         Circle c1 = new Circle();
         c1.setVertices(1);
@@ -21,6 +18,7 @@ public class Main {
         c3.setColor("blue");
 
 //        Static call
+        System.out.println("Static call");
         Utils.printCircleStatic(c3);
 
         Rectangle r1 = new Rectangle();

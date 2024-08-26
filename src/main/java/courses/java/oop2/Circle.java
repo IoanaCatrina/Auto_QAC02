@@ -25,6 +25,10 @@ public class Circle extends Shape {
         System.out.println("Radius: " + this.radius);
         System.out.println("-----------------");
     }
+    @Override
+    public void printShape() {
+        printCircle();
+    }
 
 
 }
