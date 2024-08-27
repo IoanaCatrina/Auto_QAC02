@@ -3,10 +3,12 @@ package homeworks.java.oop3;
 public class ConferenceRoom extends Room {
     private String name;
     private int seatNumber;
+    private int floorNumber;
 
-    public ConferenceRoom(String name, int seatNumber) {
+    public ConferenceRoom(String name, int seatNumber, int floorNumber) {
         this.name = name;
         this.seatNumber = seatNumber;
+        this.floorNumber = floorNumber;
     }
 
     public int getSeatNumber() {
@@ -18,18 +20,27 @@ public class ConferenceRoom extends Room {
     }
 
     @Override
-    public String getRoomType() {
-        return "Conference Room";
-    }
-
-    @Override
     public String getDetails() {
-        return  name + ": " + seatNumber + " seats";
+        String details = this.name + ": " + this.seatNumber + " seats";
+        if (hasTelepresence()) {
+            details = details + "\n" + "Conference equipment - Telepresence";
+        }
+        return details + "\n" + getDevice();
     }
 
-    /* public boolean hasVideoprojector() {
+    public String getDevice() {
         if (seatNumber == 30) {
+            return "Device: Video projector";
+        } else {
+            return "Device: TV";
+        }
+    }
+
+    public boolean hasTelepresence() {
+        if (floorNumber == 3) {
             return true;
         } else return false;
-    }*/
+    }
+
+
 }

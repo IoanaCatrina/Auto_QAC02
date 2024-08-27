@@ -8,12 +8,7 @@ public class Toilet extends Room{
     }
 
     @Override
-    public String getRoomType () {
-        return "Toilet";
-    }
-
-    @Override
     public String getDetails() {
-        return name;
+        return this.name;
     }
 }

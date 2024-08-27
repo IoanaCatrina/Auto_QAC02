@@ -18,12 +18,7 @@ public class OfficeSpace extends Room {
     }
 
     @Override
-    public String getRoomType() {
-        return "Office Space";
-    }
-
-    @Override
     public String getDetails() {
-        return  name + ": " + deskNumber + " desks";
+        return  this.name + ": " + this.deskNumber + " desks";
     }
 }

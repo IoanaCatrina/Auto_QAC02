@@ -1,14 +1,12 @@
 package homeworks.java.oop3;
 
-public class Room {
+abstract public class Room {
 
     public Room() {
     }
-    public String getRoomType() {
-        return "";
-    }
+
     public String getDetails() {
-        return  "";
+        return "";
     }
 
 }

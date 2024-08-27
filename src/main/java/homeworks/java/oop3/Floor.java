@@ -11,11 +11,11 @@ public class Floor {
         this.rooms = rooms;
     }
 
-    public void displayRooms() {
-        System.out.println("Floor " + floorNumber + ":");
+    public String displayRoomsDetails() {
+        String details = "Floor " + this.floorNumber + ":";
         for (Room r : rooms) {
-            System.out.println(r.getDetails());
+            details = details + "\n" + r.getDetails() ;
         }
+        return details + "\n";
     }
-
 }
