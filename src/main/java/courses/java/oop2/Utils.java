@@ -29,7 +29,7 @@ public class Utils {
         HashMap<Character, Integer> charMap = new HashMap<>();
         for (char c : text.toLowerCase().toCharArray()) {
             if (charMap.containsKey(c)) {
-                charMap.put(c, charMap.get(c) + 1);
+                charMap.put(c , charMap.get(c) + 1);
             }
             else {
                 charMap.put(c, 1);

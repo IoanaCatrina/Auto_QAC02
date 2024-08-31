@@ -47,6 +47,7 @@ public class Catalogue {
         }
 
         }
+
     public void deleteStudent(String name) {
         if(searchStudent(name)) {
             students.remove(name);
