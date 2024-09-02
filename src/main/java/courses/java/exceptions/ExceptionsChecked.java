@@ -14,7 +14,7 @@ public class ExceptionsChecked {
             System.out.println("Please provide a radius value as runtime argument");
         } catch (NumberFormatException e) {
             System.out.println("Please provide a valid number as radius value, error found : " + e.getMessage());
-        } catch (IllegalArgumentException | MyCustomException e) {
+        } catch (IllegalArgumentException | MyCustomException  e) {
                 System.out.println("Exception: " + e.getMessage());
         } catch (Exception e) {
             System.out.println("Error unchecked exception " + e.getMessage());
