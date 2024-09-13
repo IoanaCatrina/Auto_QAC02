@@ -1,4 +1,4 @@
-package homeworks;
+package homeworks.selenium1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -36,10 +36,11 @@ public class LoginTest {
         WebElement dismissPopup = driver.findElement(By.cssSelector("#mat-dialog-0 > app-welcome-banner > div > div:nth-child(3) > button.mat-focus-indicator.close-dialog.mat-raised-button.mat-button-base.mat-primary.ng-star-inserted > span.mat-button-wrapper > span"));
         dismissPopup.click();
 
-
         WebElement usernameField = driver.findElement(By.id("email"));
         usernameField.clear();
         usernameField.sendKeys(email);
+
+
 
         WebElement passwordField = driver.findElement(By.id("password"));
         passwordField.clear();
@@ -66,5 +67,8 @@ public class LoginTest {
             Assert.assertEquals(generalErrorMessage.getText(), generalError, "Check the general error");
         }
         driver.quit();
+
+
+
     }
 }
