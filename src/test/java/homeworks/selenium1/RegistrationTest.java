@@ -3,11 +3,10 @@ package homeworks.selenium1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import testNG.BrowserUtils;
+import utils.BrowserUtils;
 
 public class RegistrationTest {
     WebDriver driver;
@@ -26,7 +25,7 @@ public class RegistrationTest {
                                                String securityQuestion, String securityQuestionError,
                                                String answer, String answerError) {
 
-        driver = BrowserUtils.getDriver();
+        driver = BrowserUtils.getDriver("firefox");
         driver.navigate().to("http://57.151.123.81:3000/#/register");
 
         WebElement dismissPopup = driver.findElement(By.cssSelector("#mat-dialog-0 > app-welcome-banner > div > div:nth-child(3) > button.mat-focus-indicator.close-dialog.mat-raised-button.mat-button-base.mat-primary.ng-star-inserted > span.mat-button-wrapper > span"));

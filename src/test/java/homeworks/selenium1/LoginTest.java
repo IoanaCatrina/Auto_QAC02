@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import testNG.BrowserUtils;
+import utils.BrowserUtils;
 
 import java.time.Duration;
 
@@ -29,7 +29,7 @@ public class LoginTest {
 
     @Test(dataProvider = "negativeLoginDataProvider")
     public void verifyNegativeLoginTest(String email, String password, String userError, String passwordError, String generalError) {
-        driver = BrowserUtils.getDriver();
+        driver = BrowserUtils.getDriver("firefox");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         driver.navigate().to("http://57.151.123.81:3000/#/login");
