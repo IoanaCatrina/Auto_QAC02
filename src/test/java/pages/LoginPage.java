@@ -66,4 +66,20 @@ public class LoginPage extends BasePage {
         System.out.println("Welcome message is displayed: " + welcomeMessage.getText());
         return welcomeMessage.isDisplayed();
     }
+
+    public boolean verifyFailedLoginError() {
+        String errorXpath = "//form/p[contains(text(), 'Invalid username or password!')]";
+
+        WebElement errorMessage = waitUntilElementVisible(By.xpath(errorXpath));
+        System.out.println("Error message is displayed: " + errorMessage.getText());
+        return errorMessage.isDisplayed();
+    }
+
+    public String getErrorMessage() {
+        String errorXpath = "//form/p[contains(text(), 'Invalid username or password!')]";
+
+        WebElement errorMessage = waitUntilElementVisible(By.xpath(errorXpath));
+        System.out.println("Error message: " + errorMessage.getText());
+        return errorMessage.getText();
+    }
 }
