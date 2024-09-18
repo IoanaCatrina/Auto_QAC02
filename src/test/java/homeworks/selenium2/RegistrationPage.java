@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import pages.BasePage;
 
-import java.sql.SQLOutput;
+
 
 public class RegistrationPage extends BasePage {
     @FindBy(xpath = "//h1[contains(text(), 'Sign up')]")
