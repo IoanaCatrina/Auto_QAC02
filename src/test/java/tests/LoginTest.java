@@ -25,8 +25,8 @@ public class LoginTest extends BaseTest {
         getBrowser(browser);
         getBaseURL();
 
-        System.out.println("Open next url: " + baseURL + "/?page=login");
-        driver.navigate().to(baseURL + "/?page=login");
+        navigateToURL("/?page=login");
+
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(username, password);
 
