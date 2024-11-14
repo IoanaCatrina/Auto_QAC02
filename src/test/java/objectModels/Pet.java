@@ -1,9 +1,8 @@
 package objectModels;
 
 import java.util.List;
-import java.util.Objects;
 
-public class PetModel {
+public class Pet {
     int id;
     Category category;
     String name;
@@ -11,10 +10,10 @@ public class PetModel {
     List<Tag> tags;
     String status;
 
-    public PetModel() {
+    public Pet() {
     }
 
-    public PetModel(int id, Category category, String name, List<String> photoUrls, List<Tag> tags, String status) {
+    public Pet(int id, Category category, String name, List<String> photoUrls, List<Tag> tags, String status) {
         this.id = id;
         this.category = category;
         this.name = name;
