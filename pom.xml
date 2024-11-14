@@ -19,6 +19,12 @@
         <lombokVersion>1.18.34</lombokVersion>
         <jacksonDatabind>2.17.2</jacksonDatabind>
         <openCSVVersion>5.9</openCSVVersion>
+        <glassfishVersion>4.0.5</glassfishVersion>
+        <jakartaXMLBind>4.0.2</jakartaXMLBind>
+        <javaxXML>2.3.1</javaxXML>
+        <jaxbImpl>4.0.5</jaxbImpl>
+        <mySQLConnector>8.0.33</mySQLConnector>
+        <restAssuredVersion>5.5.0</restAssuredVersion>
 
     </properties>
 
@@ -67,27 +73,27 @@
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
-            <version>4.0.5</version>
+            <version>${glassfishVersion}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api -->
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
-            <version>4.0.2</version>
+            <version>${jakartaXMLBind}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
-            <version>2.3.1</version>
+            <version>${javaxXML}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl -->
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>
-            <version>4.0.5</version>
+            <version>${jaxbImpl}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
         <dependency>
@@ -99,7 +105,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version>
+            <version>${mySQLConnector}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
@@ -113,7 +119,7 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>5.5.0</version>
+            <version>${restAssuredVersion}</version>
             <scope>test</scope>
         </dependency>
 
